@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="cs" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MePlay RPG | Oficiální stránky</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome pro ikony -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rpgGold: '#d4af37',
+                        rpgGoldHover: '#f3cd44',
+                        rpgDark: '#0a0a0c',
+                        rpgCard: '#121216',
+                        rpgBorder: '#262630'
+                    },
+                    fontFamily: {
+                        serif: ['Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-rpgDark text-gray-200 font-sans antialiased selection:bg-rpgGold selection:text-rpgDark">
+
+    <!-- NAVIGACE -->
+    <nav class="sticky top-0 z-50 bg-rpgDark/95 backdrop-blur-md border-b border-rpgBorder px-4 lg:px-8 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="#" class="text-2xl font-black tracking-widest text-white font-serif flex items-center gap-2">
+                <i class="fa-solid fa-dice-d20"></i> MEPLAY<span class="text-rpgGold">RPG</span>
+            </a>
+            
+            <!-- Desktop menu -->
+            <div class="hidden md:flex items-center gap-8 font-medium tracking-wide text-sm uppercase">
+                <a href="#o-hre" class="hover:text-rpgGold transition-colors">O Serveru</a>
+                <a href="#mechaniky" class="hover:text-rpgGold transition-colors">Mechaniky</a>
+                <a href="#svet" class="hover:text-rpgGold transition-colors">Svět</a>
+                <a href="#postavy" class="hover:text-rpgGold transition-colors">Postavy</a>
+                <a href="#edice" class="hover:text-rpgGold transition-colors">Edice</a>
+            </div>
+
+            <div>
+                <a href="#edice" class="bg-rpgGold hover:bg-rpgGoldHover text-rpgDark font-bold uppercase text-xs tracking-wider px-5 py-2.5 rounded transition-all transform hover:scale-105 inline-block">
+                    Připojit se
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO BANNER (S vloženým key_art_logo.png) -->
+    <header class="relative min-h-[95vh] flex items-center justify-center text-center px-4 bg-gradient-to-b from-rpgDark/40 via-rpgDark/80 to-rpgDark" style="background-image: linear-gradient(to bottom, rgba(10,10,12,0.5), rgba(10,10,12,0.95)), url('https://images.unsplash.com/photo-1519074069444-1ba4fff16412?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center;">
+        <div class="max-w-4xl mx-auto space-y-6 flex flex-col items-center">
+            <span class="text-rpgGold uppercase font-bold tracking-widest text-sm bg-rpgGold/10 px-4 py-1.5 rounded-full border border-rpgGold/30 inline-block animate-pulse">
+                Nová Éra českých minecraft RPG serverů
+            </span>
+            
+            <!-- Hlavní obrázek loga a key artu -->
+            <div class="w-full max-w-2xl my-4 transform hover:scale-[1.02] transition-transform duration-500">
+                <img src="./key_art_logo.png" alt="MePlay RPG Key Art" class="w-full h-auto object-contain mx-auto filter drop-shadow-[0_10px_25px_rgba(212,175,55,0.25)]">
+            </div>
+
+            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto font-light leading-relaxed">
+                MePlay RPG přináší nejenom strhující příběh, ve kterém hrají hlavní roli tvá rozhodnutí, ale i propracované mechaniky pro multiplayer zážitek. Připoj se k nám a staň se součástí světa, kde každý tvůj krok má důsledky.
+            </p>
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+                <a href="#edice" class="w-full sm:w-auto bg-rpgGold hover:bg-rpgGoldHover text-rpgDark font-extrabold uppercase tracking-wider px-8 py-4 rounded transition-all text-sm shadow-lg shadow-rpgGold/20">
+                    <i class="fa-solid fa-shield-halved mr-2"></i> Připojit se
+                </a>
+                <a href="https://www.yout-ube.com/watch?v=iqnVn1SZAJ8" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-transparent hover:bg-white/5 text-white font-bold uppercase tracking-wider px-8 py-4 rounded border border-gray-600 hover:border-white transition-all text-sm">
+                    <i class="fa-solid fa-play mr-2"></i> Ukázka Hratelnosti
+                </a>
+            </div>
+        </div>
+        
+        <!-- Prvek stuhy dole na banneru -->
+        <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-rpgDark to-transparent"></div>
+    </header>
+
+    <!-- STRHUJÍCÍ AKČNÍ RPG (Základní pilíře hry) -->
+    <section id="o-hre" class="py-24 px-4 max-w-7xl mx-auto border-b border-rpgBorder">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <h2 class="text-xs uppercase font-bold tracking-widest text-rpgGold">Strhující RPG zážitek</h2>
+            <p class="text-3xl md:text-4xl font-serif font-bold text-white uppercase">Pohlcující a nelítostný svět</p>
+            <p class="text-gray-400">Každá akce vyvolá reakci. Svět MePlay-RPG reaguje na to, co říkáš a s kým se setkáváš.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Pilíř 1 -->
+            <div class="bg-rpgCard border border-rpgBorder p-8 rounded-lg hover:border-rpgGold/50 transition-all duration-300 group">
+                <div class="text-rpgGold text-3xl mb-4 group-hover:scale-110 transition-transform"><i class="fa-solid fa-scroll"></i></div>
+                <h3 class="text-xl font-bold font-serif text-white mb-2 uppercase">Propracovaný příběh</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Prožij epický příběh o zradě, dobrodružství a hledání vlastního místa v ději plném zvratů.</p>
+            </div>
+            <!-- Pilíř 2 -->
+            <div class="bg-rpgCard border border-rpgBorder p-8 rounded-lg hover:border-rpgGold/50 transition-all duration-300 group">
+                <div class="text-rpgGold text-3xl mb-4 group-hover:scale-110 transition-transform"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <h3 class="text-xl font-bold font-serif text-white mb-2 uppercase">Volnost rozhodování</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Neexistuje jediné správné řešení. Úkoly lze plnit silou, diplomacií nebo plížením se ve stínech.</p>
+            </div>
+            <!-- Pilíř 3 -->
+            <div class="bg-rpgCard border border-rpgBorder p-8 rounded-lg hover:border-rpgGold/50 transition-all duration-300 group">
+                <div class="text-rpgGold text-3xl mb-4 group-hover:scale-110 transition-transform"><i class="fa-solid fa-earth-europe"></i></div>
+                <h3 class="text-xl font-bold font-serif text-white mb-2 uppercase">Otevřený svět</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Objevuj rozsáhlá království, temné hvozdy, zapomenuté jeskyně a pulzující středověká města. A TO VŠE RUČNĚ STAVĚNÝ.</p>
+            </div>
+            <!-- Pilíř 4 -->
+            <div class="bg-rpgCard border border-rpgBorder p-8 rounded-lg hover:border-rpgGold/50 transition-all duration-300 group">
+                <div class="text-rpgGold text-3xl mb-4 group-hover:scale-110 transition-transform"><i class="fa-solid fa-gavel"></i></div>
+                <h3 class="text-xl font-bold font-serif text-white mb-2 uppercase">Multiplayer</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Narozdíl od jiných projektů MePlay-RPG nabízí multyplayer. Obchoduj s hráči, uzavírej smlouvy, veď bitvy a piš dějiny.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MECHANIKY A BOJ -->
+    <section id="mechaniky" class="py-24 bg-gradient-to-b from-rpgDark to-rpgCard px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-rpgGold text-xs font-bold uppercase tracking-widest block">Účastni se bitev</span>
+                <h2 class="text-4xl font-serif font-black text-white uppercase leading-tight">Bojuj po svém, <br>ale přežij!</h2>
+                <p class="text-gray-400 leading-relaxed">
+                    Vítězství v soubojích není o náhodě nebo zběsilém klikání, nýbrž o čisté zručnosti a taktice. Je třeba odhalit slabiny protivníka, dokonale vykrýt jeho výpady a skládat devastující komba.
+                </p>
+                
+                <div class="space-y-4 pt-4">
+                    <div class="border-l-2 border-rpgGold pl-4">
+                        <h4 class="text-white font-bold uppercase text-sm tracking-wide">Rozšířený arzenál</h4>
+                        <p class="text-gray-400 text-sm">Využij nové zbraně a vybavení v boji.</p>
+                    </div>
+                    <div class="border-l-2 border-rpgBorder pl-4 hover:border-rpgGold transition-colors">
+                        <h4 class="text-white font-bold uppercase text-sm tracking-wide">Vylepšuj své zbraně a buď nezastavitelný</h4>
+                        <p class="text-gray-400 text-sm">Zbraně si můžeš vylepšovat a získávat nové možnosti.</p>
+                    </div>
+                    <div class="border-l-2 border-rpgBorder pl-4 hover:border-rpgGold transition-colors">
+                        <h4 class="text-white font-bold uppercase text-sm tracking-wide">Vývoj postavy stylem hraní</h4>
+                        <p class="text-gray-400 text-sm">Zlepšuješ se přesně v tom, co děláš. Častým šermováním sílíš, mluvením s lidmi se učíš výmluvnosti.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-rpgGold to-amber-700 rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+                <div class="relative rounded-lg overflow-hidden bg-rpgDark border border-rpgBorder aspect-video">
+                    <img src="https://images.unsplash.com/photo-1599733589046-10c005739ef9?auto=format&fit=crop&w=800&q=80" alt="Bojový systém" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-rpgDark via-transparent to-transparent"></div>
+                    <span class="absolute bottom-4 left-4 text-xs font-bold uppercase tracking-widest text-rpgGold bg-rpgDark/80 px-3 py-1 rounded border border-rpgBorder">
+                        Autentické herní záběry
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOHATÝ SVĚT -->
+    <section id="svet" class="py-24 px-4 max-w-7xl mx-auto border-b border-rpgBorder">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div>
+                <span class="text-rpgGold text-xs font-bold uppercase tracking-widest block mb-2">Kam tě cesta zavede</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-white uppercase">Prozkoumej neznámá místa</h2>
+            </div>
+            <p class="text-gray-400 max-w-md mt-4 md:mt-0">
+                Od prosperujících stříbrných měst po hluboké, neprostupné lesy plné lapků. Každý kout sveta skrývá své tajemství.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-rpgCard border border-rpgBorder rounded-lg overflow-hidden group">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1546484475-7f7bd55792da?auto=format&fit=crop&w=600&q=80" alt="Stříbrná Hora" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-6 space-y-2">
+                    <span class="text-rpgGold text-xs uppercase tracking-wider font-semibold">Královské Město</span>
+                    <h3 class="text-xl font-serif font-bold text-white uppercase">Královec</h3>
+                    <p class="text-gray-400 text-sm">Centrum obchodu a moci založené na bohatých nalezištích stříbra. Místo intrik aristokracie.</p>
+                </div>
+            </div>
+            <div class="bg-rpgCard border border-rpgBorder rounded-lg overflow-hidden group">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1605001011156-cbf0b0f67a51?auto=format&fit=crop&w=600&q=80" alt="Skalní Hrad" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-6 space-y-2">
+                    <span class="text-rpgGold text-xs uppercase tracking-wider font-semibold">Pevnost</span>
+                    <h3 class="text-xl font-serif font-bold text-white uppercase">Hradisko Valy</h3>
+                    <p class="text-gray-400 text-sm">Nedobytná bašta vystavěná na strmých čedičových skalách, která shlíží na okolní neklidný kraj.</p>
+                </div>
+            </div>
+            <div class="bg-rpgCard border border-rpgBorder rounded-lg overflow-hidden group">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=600&q=80" alt="Hluboké Hvozdy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-6 space-y-2">
+                    <span class="text-rpgGold text-xs uppercase tracking-wider font-semibold">Divočina</span>
+                    <h3 class="text-xl font-serif font-bold text-white uppercase">Zaječí lhota</h3>
+                    <p class="text-gray-400 text-sm">Nebezpečné místo těsně u hranic království.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POSTAVY -->
+    <section id="postavy" class="py-24 bg-rpgCard px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-2">
+                <span class="text-rpgGold text-xs font-bold uppercase tracking-widest">Kdo stojí po tvém boku?</span>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-white uppercase">Klíčové Postavy Příběhu</h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-rpgDark p-6 rounded-lg border border-rpgBorder flex flex-col sm:flex-row gap-6 items-center sm:items-start">
+                    <div class="w-32 h-32 rounded-full overflow-hidden shrink-0 border-2 border-rpgGold">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Valerián" class="w-full h-full object-cover">
+                    </div>
+                    <div class="space-y-2 text-center sm:text-left">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                            <h3 class="text-xl font-serif font-bold text-white">Martin</h3>
+                            <span class="text-rpgGold text-xs uppercase bg-rpgGold/10 px-2 py-0.5 rounded border border-rpgGold/20 font-mono">Cizinec z daleka</span>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Mladík, který během jednoho dne i přes zákaz krále opustí své rodné město a vydává se na cestu, která změní jeho život. 
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-rpgDark p-6 rounded-lg border border-rpgBorder flex flex-col sm:flex-row gap-6 items-center sm:items-start">
+                    <div class="w-32 h-32 rounded-full overflow-hidden shrink-0 border-2 border-gray-600">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Mladý Pán Jan" class="w-full h-full object-cover">
+                    </div>
+                    <div class="space-y-2 text-center sm:text-left">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                            <h3 class="text-xl font-serif font-bold text-white">Ondřej</h3>
+                            <span class="text-rpgGold text-xs uppercase bg-rpgGold/10 px-2 py-0.5 rounded border border-rpgGold/20 font-mono">Člen původní skupiny</span>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Člověk, který se objvevil v neznámém světě a položil základy pro budoucí království. Jeho rozhodnutí a činy budou mít dalekosáhlé důsledky pro všechny, kteří se s ním setkají.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDICE HRY -->
+    <section id="edice" class="py-24 px-4 max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-2">
+            <span class="text-rpgGold text-xs font-bold uppercase tracking-widest">Vyber si svou cestu</span>
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-white uppercase">Edice Hry MePlay RPG</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-rpgCard border border-rpgBorder rounded-lg p-8 flex flex-col justify-between relative">
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-serif font-bold text-white uppercase tracking-tight">Standard Edice</h3>
+                    <p class="text-3xl font-black text-white">Zdarma</p>
+                    <hr class="border-rpgBorder">
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><i class="fa-solid fa-check text-rpgGold mr-2"></i> Základní přístup k MePlay RPG</li>
+                        <li><i class="fa-solid fa-check text-rpgGold mr-2"></i> Přístup ke všem bezplatným aktualizacím</li>
+                    </ul>
+                </div>
+                <button class="mt-8 w-full bg-transparent hover:bg-white/5 border border-gray-600 hover:border-white text-white font-bold uppercase py-3 rounded tracking-wider text-xs transition-colors">
+                    Připojit se
+                </button>
+            </div>
+
+            <div class="bg-rpgCard border-2 border-rpgGold rounded-lg p-8 flex flex-col justify-between relative shadow-2xl shadow-rpgGold/10 transform md:-translate-y-4">
+                <div class="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 bg-rpgGold text-rpgDark text-[10px] font-black uppercase tracking-widest px-4 py-1 rounded-full">
+                    Doporučeno
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-serif font-bold text-white uppercase tracking-tight">Rytířská Edice</h3>
+                    <p class="text-3xl font-black text-rpgGold">199 Kč</p>
+                    <hr class="border-rpgBorder">
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li><i class="fa-solid fa-check text-rpgGold mr-2"></i> Základní hra MePlay RPG</li>
+                        <li><i class="fa-solid fa-check text-rpgGold mr-2"></i> Přístup ke všem bezplatným aktualizacím</li>
+                        <li><i class="fa-solid fa-check text-rpgGold mr-2"></i> Balíček DLC: Čarodějský poslání</li>
+                        <li><i class="fa-solid fa-check text-rpgGold mr-2"></i> Exkluzivní kosmetický set "Zbroj Lva"</li>
+                        
+                        
+                    </ul>
+                </div>
+                <button class="mt-8 w-full bg-rpgGold hover:bg-rpgGoldHover text-rpgDark font-black uppercase py-3 rounded tracking-wider text-xs transition-all shadow-lg shadow-rpgGold/20">
+                    Koupit Rytířskou
+                </button>
+            </div>
+
+            <div class="bg-rpgCard border border-rpgBorder rounded-lg p-8 flex flex-col justify-between relative">
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-serif font-bold text-white uppercase tracking-tight">Královská Edice</h3>
+                    <p class="text-3xl font-black text-white">497 Kč</p>
+                    <hr class="border-rpgBorder">
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><i class="fa-solid fa-check text-rpgGold mr-2"></i> Vše z edice Royal</li>
+                        <li><i class="fa-solid fa-check text-rpgGold mr-2"></i> Season Pass (všechna budoucí DLC)</li>
+                        <li><i class="fa-solid fa-check text-rpgGold mr-2"></i> Sběratelský digitální obsah</li>
+                    </ul>
+                </div>
+                <button class="mt-8 w-full bg-transparent hover:bg-white/5 border border-gray-600 hover:border-white text-white font-bold uppercase py-3 rounded tracking-wider text-xs transition-colors">
+                    Koupit Královskou
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- CITACE / RECENZE -->
+    <section class="bg-rpgDark py-20 px-4 border-t border-b border-rpgBorder">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="space-y-2">
+                <p class="text-xl font-serif italic text-white">„-“</p>
+                <p class="text-xs uppercase font-bold text-rpgGold tracking-wider">-</p>
+            </div>
+            <div class="space-y-2 border-y md:border-y-0 md:border-x border-rpgBorder py-6 md:py-0">
+                <p class="text-xl font-serif italic text-white">„-“</p>
+                <p class="text-xs uppercase font-bold text-rpgGold tracking-wider">-</p>
+            </div>
+            <div class="space-y-2">
+                <p class="text-xl font-serif italic text-white">„-.“</p>
+                <p class="text-xs uppercase font-bold text-rpgGold tracking-wider">-</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PATIČKA -->
+    <footer class="bg-rpgCard border-t border-rpgBorder py-12 px-4 text-xs text-gray-500">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div class="space-y-2">
+                <p class="text-sm font-serif font-bold text-white tracking-widest uppercase">MEPLAY RPG</p>
+                <p>© 2026 MePlay | Všechna práva vyhrazena.</p>
+               
+            </div>
+            <div class="flex gap-6 text-lg">
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-discord"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
